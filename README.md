@@ -12,3 +12,5 @@ Resume
     `git commit -m 'added new files'` [Enter]
   * Push the commit the remote
     `git push [remote name] master` [Enter]
+
+touch
