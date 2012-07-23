@@ -4,6 +4,7 @@
   <title>Elements of Experience</title>
   <link href="stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="stylesheets/isotope.min.css" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/github_pages.css" rel="stylesheet" type="text/css" />
   <link href="stylesheets/app.min.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script data-main="javascripts/main" src="javascripts/require.js"></script>
@@ -23,11 +24,13 @@
           <a class="brand" href="http://knockoutjs.com/">knockout</a>
           <a class="brand" style="padding-right: 0px;" href="http://isotope.metafizzy.co">isotope</a>
         </div>
+
       </div>
+      <a id="forkme_banner" href="https://github.com/danieleli/elements_of_experience">View on GitHub</a>
+
     </div>
   </div>
   <div class="container">
-
     <div class="clearfix"></div>
     <div id="node-container" class="variable-sizes clickable clearfix isotope" data-bind="foreach: nodes">
       <div class="" data-bind="attr: { class: clazz }">
@@ -57,7 +60,36 @@
       </div>
     </div>
   </div>
-  <footer></footer>
+
+
+  <!-- DEBUGGER -->
   <div id="debug" class="container"></div>
+  
+  <!-- FOOTER  -->
+  <div id="footer_wrap" class="outer">
+    <footer class="container">
+      <section id="downloads">
+        <a class="zip_download_link" href="https://github.com/danieleli/elements_of_experience/zipball/master">Download this project as a .zip file</a>
+        <a class="tar_download_link" href="https://github.com/danieleli/elements_of_experience/tarball/master">Download this project as a tar.gz file</a>
+      </section>
+
+      <p class="copyright">Elements of experience maintained by <a href="https://github.com/danieleli">danieleli</a></p>
+      <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+
+    </footer>
+  </div>
+
+  <!-- SCRIPTS  -->
+  <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    try {
+      var pageTracker = _gat._getTracker("UA-22748099-7");
+    pageTracker._trackPageview();
+    } catch(err) {}
+  </script>
+  
 </body>
 </html>
