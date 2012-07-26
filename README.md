@@ -19,7 +19,7 @@ Linked in:
 http://www.linkedin.com/in/danschlossberg
 
 Original Resume is here:
-https://docs.google.com/document/edit?id=1-Zefi2Wpn2ZL5tcjpN-W1kLp_o96xRGMuFqHVfqCjgI
+http://docs.google.com/document/edit?id=1-Zefi2Wpn2ZL5tcjpN-W1kLp_o96xRGMuFqHVfqCjgI
 
 Stackoverflow: danieleli
 http://stackoverflow.com/users/273163/danieleli
@@ -27,7 +27,7 @@ http://stackoverflow.com/users/273163/danieleli
 BundleMe
 http://bit.ly/softwarecraftsman
 
-website / blog
-wwww.softwaresingularity.com
+website / blog  
+http://www.softwaresingularity.com
 
 
