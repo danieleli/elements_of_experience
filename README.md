@@ -1,4 +1,4 @@
-!! switch branch above from 'master' to 'gh-pages' to see source !! 
+(note: Source is on 'gh-pages' branch.  This is 'master' branch.  Or click here: https://github.com/danieleli/elements_of_experience/tree/gh-pages )
 
 elements_of_experience v0.1 
 ===========================
