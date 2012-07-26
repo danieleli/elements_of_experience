@@ -11,7 +11,7 @@ Production is hosted here: GitHub Pages - http://danieleli.github.com/elements_o
 
 UI - http://twitter.github.com/bootstrap/
 
-Javascript -http://knockoutjs.com/
+Javascript DOM bindings and view model -http://knockoutjs.com/
 
 awesomeness - http://isotope.metafizzy.co/ 
 
