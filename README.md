@@ -15,3 +15,19 @@ Javascript DOM bindings and view model -http://knockoutjs.com/
 
 awesomeness - http://isotope.metafizzy.co/ 
 
+Linked in:
+http://www.linkedin.com/in/danschlossberg
+
+Original Resume is here:
+https://docs.google.com/document/edit?id=1-Zefi2Wpn2ZL5tcjpN-W1kLp_o96xRGMuFqHVfqCjgI
+
+Stackoverflow: danieleli
+http://stackoverflow.com/users/273163/danieleli
+
+BundleMe
+http://bit.ly/softwarecraftsman
+
+website / blog
+wwww.softwaresingularity.com
+
+
