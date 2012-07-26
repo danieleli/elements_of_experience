@@ -36,7 +36,7 @@ body{margin-top:50px}
 .element *{position:absolute;margin:0;white-space:nowrap}
 .element .symbol{left:8px;top:.8em;font-size:2.8em;line-height:1.0em;color:#fff}
 .element .name{left:4px;bottom:1.0em;font-size:1.05em}
-.large .element .symbol{top:0.4em;}
+.element.large .symbol{top:0.4em;}
 .element .category{font-size:.9em;left:4px;bottom:.5em}
 .element .experience{font-size:1.25em;font-weight:bold;color:rgba(0,0,0,0.5);right:.5em;top:.5em}
 .element.large,.variable-sizes .element.large,.variable-sizes .element.large.width2.height2{font-size:3.0em;width:350px;height:350px;z-index:100}
