@@ -1,0 +1,42 @@
+body{margin-top:50px}
+.navbar-fixed-top .brand{padding-left:0;margin-left:0;font-weight:bold;color:#000;text-shadow:0 1px 0 rgba(255,255,255,0.1),0 0 30px rgba(255,255,255,0.125);-webkit-transition:all .2s linear;-moz-transition:all .2s linear;transition:all .2s linear}
+.navbar-fixed-top .brand .brand:hover{text-decoration:none}
+#node-container{width:840px;display:inline-block}
+.sidebar{display:inline-block;width:90px;vertical-align:top}
+.sidebar h3{color:#aaa;text-align:center}
+.sidebar li{list-style:none;width:68px;margin:1px 0}
+.sidebar ul{margin:0;padding:0}
+.sidebar #clear-all{width:68px;background:#666;color:#eee;text-shadow:none;margin-top:2px}
+#debug{margin-top:150px;color:#999}
+.isotope-item{z-index:2}
+.isotope-hidden.isotope-item{pointer-events:none;z-index:1}
+.isotope{-webkit-transition-duration:.8s;-moz-transition-duration:.8s;-ms-transition-duration:.8s;-o-transition-duration:.8s;transition-duration:.8s;-webkit-transition-property:height,width;-moz-transition-property:height,width;-ms-transition-property:height,width;-o-transition-property:height,width;transition-property:height,width}
+.isotope .isotope-item{-webkit-transition-duration:.8s;-moz-transition-duration:.8s;-ms-transition-duration:.8s;-o-transition-duration:.8s;transition-duration:.8s;-webkit-transition-property:-webkit-transform,opacity;-moz-transition-property:-moz-transform,opacity;-ms-transition-property:-ms-transform,opacity;-o-transition-property:top,left,opacity;transition-property:transform,opacity}
+.isotope.no-transition,.isotope .isotope.no-transition .isotope-item,.isotope .isotope .isotope-item.no-transition{-webkit-transition-duration:0s;-moz-transition-duration:0s;-ms-transition-duration:0s;-o-transition-duration:0s;transition-duration:0s}
+.isotope.infinite-scrolling{-webkit-transition:none;-moz-transition:none;-ms-transition:none;-o-transition:none;transition:none}
+.variable-sizes .element.width2{width:200px}
+.variable-sizes .element.height2{height:230px}
+.variable-sizes .element.width2.height2{font-size:2.0em}
+.clickable .element:hover{cursor:pointer}
+.clickable .element:hover h3{text-shadow:0 0 7px white,0 0 7px white}
+.clickable .element:hover h2{color:white}
+.element{font-family:'Helvetica Neue',Arial,sans-serif;width:110px;height:110px;margin:5px;float:left;overflow:hidden;position:relative;background:#c00;color:#222;-webkit-border-top-right-radius:1.2em;-moz-border-radius-topright:1.2em;border-top-right-radius:1.2em}
+.element.language{background:#cc5200}
+.element.architecture{background:#cca300}
+.element.practice{background:#a3cc00}
+.element.platform{background:#52cc00}
+.element.ide{background:#0c0}
+.element.library{background:#00cc52}
+.element.database{background:#00cca3}
+.element.infrastructure{background:#00a3cc}
+.element.methodology{background:#0052cc}
+.element.collaboration{background:#00c}
+.element.engagement{background:#5200cc}
+.element.framework{background:#5200cc}
+.element *{position:absolute;margin:0;white-space:nowrap}
+.element .symbol{left:8px;top:.8em;font-size:2.8em;line-height:1.0em;color:#fff}
+.element .name{left:4px;bottom:1.0em;font-size:1.05em}
+.element.large .symbol{top:0.4em;}
+.element .category{font-size:.9em;left:4px;bottom:.5em}
+.element .experience{font-size:1.25em;font-weight:bold;color:rgba(0,0,0,0.5);right:.5em;top:.5em}
+.element.large,.variable-sizes .element.large,.variable-sizes .element.large.width2.height2{font-size:3.0em;width:350px;height:350px;z-index:100}

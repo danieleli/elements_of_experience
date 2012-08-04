@@ -1,0 +1,201 @@
+﻿body {
+  margin-top: 50px;
+}
+
+.navbar-fixed-top .brand {
+  padding-left: 0;
+  margin-left: 0px;
+  font-weight: bold;
+  color: #000;
+  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+  .brand:hover {
+    text-decoration: none;
+  }
+}
+
+#node-container {
+  width: 840px;
+  display: inline-block;
+}
+
+.sidebar {
+  display: inline-block;
+  width: 90px;
+  vertical-align: top;
+  h3 {
+    color: #aaa;
+    text-align: center;
+  }
+  li {
+    list-style: none;
+    width: 68px;
+    margin: 1px 0;
+  }
+  ul {
+    margin: 0px;
+    padding: 0px;
+  }
+  #clear-all { width: 68px; background: #666; color: #eee; text-shadow: none; margin-top: 2px; }
+}
+
+
+#debug { margin-top: 150px; color: #999; }
+
+.isotope-item {
+  z-index:2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events:none;
+  z-index:1;
+}
+
+.isotope {
+  -webkit-transition-duration:0.8s;
+  -moz-transition-duration:0.8s;
+  -ms-transition-duration:0.8s;
+  -o-transition-duration:0.8s;
+  transition-duration:0.8s;
+  -webkit-transition-property:height, width;
+  -moz-transition-property:height, width;
+  -ms-transition-property:height, width;
+  -o-transition-property:height, width;
+  transition-property:height, width;
+  .isotope-item {
+    -webkit-transition-duration:0.8s;
+    -moz-transition-duration:0.8s;
+    -ms-transition-duration:0.8s;
+    -o-transition-duration:0.8s;
+    transition-duration:0.8s;
+    -webkit-transition-property:-webkit-transform, opacity;
+    -moz-transition-property:-moz-transform, opacity;
+    -ms-transition-property:-ms-transform, opacity;
+    -o-transition-property:top, left, opacity;
+    transition-property:transform, opacity;
+  }
+  &.no-transition, .isotope.no-transition .isotope-item, .isotope .isotope-item.no-transition {
+    -webkit-transition-duration:0s;
+    -moz-transition-duration:0s;
+    -ms-transition-duration:0s;
+    -o-transition-duration:0s;
+    transition-duration:0s;
+  }
+  &.infinite-scrolling {
+    -webkit-transition:none;
+    -moz-transition:none;
+    -ms-transition:none;
+    -o-transition:none;
+    transition:none;
+  }
+}
+
+.variable-sizes {
+
+  .element.width2 {
+    width:200px;
+  }
+  .element.height2 {
+    height:230px;
+  }
+  .element.width2.height2 {
+    font-size:2.0em;
+  }
+}
+
+.clickable .element:hover {
+  cursor:pointer;
+  h3 {
+    text-shadow:0 0 7px white, 0 0 7px white;
+  }
+  h2 {
+    color:white;
+  }
+}
+
+@spin_size: 24;
+@color1: hsl(0,100%,40%);
+@color2: spin(@color1, @spin_size);
+@color3: spin(@color2, @spin_size);
+@color4: spin(@color3, @spin_size);
+@color5: spin(@color4, @spin_size);
+@color6: spin(@color5, @spin_size);
+@color7: spin(@color6, @spin_size);
+@color8: spin(@color7, @spin_size);
+@color9: spin(@color8, @spin_size);
+@color10: spin(@color9, @spin_size);
+@color11: spin(@color10, @spin_size);
+@color12: spin(@color11, @spin_size);
+@color13: spin(@color11, @spin_size);
+  
+
+
+.element {
+  font-family:'Helvetica Neue', Arial, sans-serif;
+  width:110px;
+  height:110px;
+  margin:5px;
+  float:left;
+  overflow:hidden;
+  position:relative;
+  background:@color1; 
+  
+  &.language { background:@color2; }
+  &.architecture { background: @color3; }
+  &.practice { background: @color4; }
+  &.platform { background: @color5; }
+  &.ide { background: @color6; }
+  &.library { background: @color7; }
+  &.database { background: @color8; }
+  &.infrastructure { background: @color9; }
+  &.methodology { background: @color10; }
+  &.collaboration { background: @color11; }
+  &.engagement { background: @color12; }
+  &.framework { background: @color13; }
+  
+  
+  color:#222222;
+  -webkit-border-top-right-radius:1.2em;
+  -moz-border-radius-topright:1.2em;
+  border-top-right-radius:1.2em;
+
+  
+  * {
+    position:absolute;
+    margin:0;
+    white-space: nowrap;
+  }
+  .symbol {
+    left:8px;
+    top:.8em;
+    font-size:2.8em;
+    line-height:1.0em;
+    color:#ffffff;
+  }
+  .name {
+    left:4px;
+    bottom:1.0em;
+    font-size:1.05em;
+  }
+  .category {
+    font-size:0.9em;
+    left:4px;
+    bottom:0.5em;
+  }
+  .experience {
+    font-size:1.25em;
+    font-weight:bold;
+    color:hsla(0,0%,0%,.5);
+    right:0.5em;
+    top:0.5em;
+  }
+}
+
+.element.large, .variable-sizes .element.large, .variable-sizes .element.large.width2.height2 {
+  font-size:3.0em;
+  width:350px;
+  height:350px;
+  z-index:100;
+}
