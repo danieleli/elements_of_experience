@@ -1,0 +1,73 @@
+!!! 5
+html
+  head
+    title Elements of Experience
+    link(href='public/stylesheets/bootstrap.min.css', rel='stylesheet', type='text/css')
+    link(href='public/stylesheets/isotope.min.css', rel='stylesheet', type='text/css')
+    link(href='public/stylesheets/github_pages.css', rel='stylesheet', type='text/css')
+    link(href='public/stylesheets/app.min.css', rel='stylesheet', type='text/css')
+    script(type='text/javascript', src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
+    script(data-main='public/javascripts/main', src='public/javascripts/require.js')
+  body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='.nav-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.brand(href='/') elements of experiencs
+          div(style='float: right;')
+            a.brand(href='http://twitter.github.com/bootstrap/') bootstrap
+            a.brand(href='http://knockoutjs.com/') knockout
+            a.brand(style='padding-righ          p.experience(data-bind='text: experience')
+          h3.symbol(data-bind='text: symbol')
+          h2.name(data-bind='text: name')
+          p.category(data-bind='text: category')t: 0px;', href='http://isotope.metafizzy.co') isotope
+        a#forkme_banner(href='https://github.com/danieleli/elements_of_experience') View on GitHub
+    .container
+      .clearfix
+      #node-container.variable-sizes.clickable.clearfix.isotope(data-bind='foreach: nodes')
+        .(data-bind='attr: { class: clazz }')
+        p.experience(data-bind='text: experience')
+        h3.symbol(data-bind='text: symbol')
+        h2.name(data-bind='text: name')
+        p.category(data-bind='text: category')
+      .sidebar
+        #sorters
+          h3 Sort
+          ul(data-bind='foreach: sorts')
+            li.btn(data-bind='text: $data, click: function() { $root.sort($data) }')
+        br
+        #filters
+          h3 Filter
+          ul(data-bind='foreach: categories')
+            li.btn(data-bind='text: name, attr: { \'data-filter\': name }, click: $root.filter, css: { active: $data.active}')
+          #clear-all.btn(data-bind='click: clearFilter')
+            | clear
+    //
+       DEBUGGER 
+    #debug.container
+    //
+       FOOTER  
+    #footer_wrap.outer
+      footer.container
+        section#downloads
+          a.zip_download_link(href='https://github.com/danieleli/elements_of_experience/zipball/master') Download this project as a .zip file
+          a.tar_download_link(href='https://github.com/danieleli/elements_of_experience/blob/gh-pages/index.html') HTML Source for this page
+        p.copyright
+          | Elements of experience maintained by
+          a(href='https://github.com/danieleli') danieleli
+        p
+          | Published with
+          a(href='http://pages.github.com') GitHub Pages
+    //
+       SCRIPTS  
+    script(type='text/javascript')
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    script(type='text/javascript')
+      try {
+      var pageTracker = _gat._getTracker("UA-22748099-7");
+      pageTracker._trackPageview();
+      } catch(err) {}
