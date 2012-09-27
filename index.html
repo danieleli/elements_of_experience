@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Elements of Experience</title>
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="stylesheets/isotope.min.css" rel="stylesheet" type="text/css"/>
+    <link href="stylesheets/github_pages.css" rel="stylesheet" type="text/css"/>
+    <link href="stylesheets/app.min.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script data-main="javascripts/main" src="javascripts/require.js"></script>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="/">elements of experiencs</a>
+
+            <div style="float: right;">
+                <a class="brand" href="http://twitter.github.com/bootstrap/">bootstrap</a>
+                <a class="brand" href="http://knockoutjs.com/">knockout</a>
+                <a class="brand" style="padding-right: 0px;" href="http://isotope.metafizzy.co">isotope</a>
+            </div>
+
+        </div>
+        <a id="forkme_banner" href="https://github.com/danieleli/elements_of_experience">View on GitHub</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="clearfix"></div>
+    <div id="node-container" class="variable-sizes clickable clearfix isotope" data-bind="foreach: nodes">
+        <div class="" data-bind="attr: { class: clazz }">
+            <p class="experience" data-bind="text: experience"></p>
+
+            <h3 class="symbol" data-bind="text: symbol"></h3>
+
+            <h2 class="name" data-bind="text: name"></h2>
+
+            <p class="category" data-bind="text: category"></p>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div id="sorters">
+            <h3>Sort</h3>
+            <ul data-bind="foreach: sorts">
+                <li class="btn" data-bind="text: $data, click: function() { $root.sort($data) }"></li>
+            </ul>
+        </div>
+        <br/>
+
+        <div id="filters">
+            <h3>Filter</h3>
+            <ul data-bind="foreach: categories">
+                <li class="btn "
+                    data-bind="text: name, attr: { 'data-filter': name }, click: $root.filter, css: { active: $data.active}">
+                </li>
+            </ul>
+            <div class="btn" id="clear-all" data-bind="click: clearFilter">
+                clear
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- DEBUGGER -->
+<div id="debug" class="container"></div>
+
+<!-- FOOTER  -->
+<div id="footer_wrap" class="outer">
+    <footer class="container">
+        <section id="downloads">
+            <a class="zip_download_link" href="https://github.com/danieleli/elements_of_experience/zipball/master">Download
+                this project as a .zip file</a>
+            <a class="tar_download_link"
+               href="https://github.com/danieleli/elements_of_experience/blob/gh-pages/index.html">HTML Source for this
+                page</a>
+        </section>
+
+        <p class="copyright">Elements of experience maintained by <a href="https://github.com/danieleli">danieleli</a>
+        </p>
+
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+
+    </footer>
+</div>
+
+<!-- SCRIPTS  -->
+<script type="text/javascript">
+    window.require(['index'], function (index) {
+    });
+</script>
+
+
+<script type="text/javascript" src='javascripts/bootstrap.js'></script>
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    try {
+        var pageTracker = _gat._getTracker("UA-22748099-7");
+        pageTracker._trackPageview();
+    } catch (err) {
+    }
+</script>
+
+</body>
+</html>
