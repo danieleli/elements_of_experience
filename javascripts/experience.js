@@ -1,6 +1,6 @@
 ﻿
 define(['jquery', 'underscore', 'knockout', 'isotope'], function ($, under, ko, iso) {
-  var indexVM = {
+  var experienceVM = {
     ViewModel: function () {
       var self = this;
       self.nodes = ko.observableArray([]);
@@ -128,5 +128,5 @@ define(['jquery', 'underscore', 'knockout', 'isotope'], function ($, under, ko, 
       };
     }
   }
-  return indexVM;
+  return experienceVM;
 });

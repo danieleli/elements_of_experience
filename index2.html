@@ -10,7 +10,6 @@
     <script data-main="javascripts/main" src="javascripts/require.js"></script>
 </head>
 <body>
-
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
@@ -29,47 +28,73 @@
 
         </div>
         <a id="forkme_banner" href="https://github.com/danieleli/elements_of_experience">View on GitHub</a>
+
     </div>
 </div>
 
-<div class="container">
-    <div class="clearfix"></div>
-    <div id="node-container" class="variable-sizes clickable clearfix isotope" data-bind="foreach: nodes">
-        <div class="" data-bind="attr: { class: clazz }">
-            <p class="experience" data-bind="text: experience"></p>
+<div data-bind="text: displayName"></div>
+<a href="#loginModal" data-toggle="modal" data-bind="visible: !(isLoggedIn())">login / register </a>
+<a href="#" data-bind="visible: isLoggedIn(), click: logout">logout</a>
 
-            <h3 class="symbol" data-bind="text: symbol"></h3>
 
-            <h2 class="name" data-bind="text: name"></h2>
 
-            <p class="category" data-bind="text: category"></p>
-        </div>
+<!-- login -->
+<div class="modal fade" id="loginModal" role='dialog'>
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 class='login_view'>Login</h3>
+
+        <h3 class='register_view hide'>Register</h3>
     </div>
-    <div class="sidebar">
-        <div id="sorters">
-            <h3>Sort</h3>
-            <ul data-bind="foreach: sorts">
-                <li class="btn" data-bind="text: $data, click: function() { $root.sort($data) }"></li>
-            </ul>
-        </div>
-        <br/>
+    <div class="modal-body">
 
-        <div id="filters">
-            <h3>Filter</h3>
-            <ul data-bind="foreach: categories">
-                <li class="btn "
-                    data-bind="text: name, attr: { 'data-filter': name }, click: $root.filter, css: { active: $data.active}">
-                </li>
-            </ul>
-            <div class="btn" id="clear-all" data-bind="click: clearFilter">
-                clear
+        <div class="control-group">
+            <label for="username">Username</label>
+
+            <div class="controls">
+                <input type="text" id="username" data-bind="value: username">
+                <span class="help-inline"></span>
             </div>
         </div>
+        <div class='register_view control-group'>
+            <label for="email">Email</label>
+            <div class="controls">
+                <input type="text" id="email" data-bind="value: email">
+                <span class="help-inline"></span>
+            </div>
+
+        </div>
+        <div class="control-group">
+            <label for="password">Password</label>
+            <div class="controls">
+                <input type="password" id="password" data-bind="value: password">
+                <span class="help-inline"></span>
+                <a href='#' class="login_view" data-bind="click: forgotPassword">forgot password</a>
+            </div>
+
+        </div>
+        <div class='register_view control-group'>
+            <label for="confirm_password">Confirm Password</label>
+            <div class="controls">
+                <input type="password" id="confirm_password" data-bind="value: confirm_password">
+                <span class="help-inline"></span>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="#" data-bind='click: toggleView' class='pull-left login_view'>Register</a>
+        <a href="#" data-bind='click: toggleView' class='pull-left register_view'>Login</a>
+        <a href="#" data-dismiss="modal" class="btn">Cancel</a>
+        <a href="#" class="login_view btn btn-primary" data-bind="click: login">Login</a>
+        <a href="#" class="register_view btn btn-primary" data-bind="click: register">Register</a>
     </div>
 </div>
-
-
-
+<style type="text/css">
+    .register_view {
+        display: none;
+    }
+</style>
 
 
 <!-- DEBUGGER -->
@@ -95,13 +120,25 @@
 </div>
 
 <!-- SCRIPTS  -->
+
 <script type="text/javascript">
-    window.require(['index'], function (index) {
+    var vm;
+    $(document).ready(function () {
+        window.require(['login', 'knockout', 'parse'], function (login, ko, parse) {
+            window.Parse.initialize("cYpqUUwP6PxhXFYD2EhqZ2dYgWHlglID3FKLc7KM", "XGEAjmlWWjY5KyirhJqgh08OVsJkjTjLXPL8vkoi");
+            vm = new login.ViewModel();
+            ko.applyBindings(vm);
+
+        });
+
     });
+
+
+
+
 </script>
 
 
-<script type="text/javascript" src='javascripts/bootstrap.js'></script>
 <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
     document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
