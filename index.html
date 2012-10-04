@@ -97,13 +97,7 @@
 <!-- SCRIPTS  -->
 <script type="text/javascript">
     $(document).ready(function () {
-        var vm;
-        
-        window.require(['login', 'knockout', 'parse'], function (login, ko, parse) {
-            window.Parse.initialize("cYpqUUwP6PxhXFYD2EhqZ2dYgWHlglID3FKLc7KM", "XGEAjmlWWjY5KyirhJqgh08OVsJkjTjLXPL8vkoi");
-            vm = new login.ViewModel();
-            ko.applyBindings(vm);
-        });
+
         
         window.require(['index'], function (index) {
         });

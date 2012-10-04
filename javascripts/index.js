@@ -1,9 +1,8 @@
 require(["jquery", "underscore", "experience", "parse"], function ($, under, experience, parse) {
 
+    window.Parse.initialize("cYpqUUwP6PxhXFYD2EhqZ2dYgWHlglID3FKLc7KM", "XGEAjmlWWjY5KyirhJqgh08OVsJkjTjLXPL8vkoi");
 
 	var Element = window.Parse.Object.extend("Element");
-
-
 
 	var data_provider = {
 		set_view_model: function (data) {
@@ -25,8 +24,6 @@ require(["jquery", "underscore", "experience", "parse"], function ($, under, exp
 				alert("error: " + error);
 			}
 		});
-
-
 
 	});
 });
